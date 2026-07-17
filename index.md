@@ -23,8 +23,3 @@ I am a Ph.D. student at TU Dresden and ScaDS.AI. My research interests lie in th
 - **[Sept. 2023]** Our paper *Touché 2022 Best of Labs: Neural Image Retrieval for Argumentation* was published as a **Best of Labs** paper at **CLEF 2023**.
 - **[Jul. 2023]** Our paper *On Stance Detection in Image Retrieval for Argumentation* was published at **SIGIR 2023**.
 - **[Sept. 2022]** Our paper *Aramis at Touché 2022: Argument Detection in Pictures using Machine Learning* was published at the **Touché Lab** of **CLEF 2022**.
-
-
-% {% include_relative _includes/publications.md %}
-
-% {% include_relative _includes/services.md %}
