@@ -4,19 +4,26 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I am a Ph.D. student at TU Dresden and ScaDS.AI. My research interests lie in the areas of natural language processing, information retrieval, trustworthy AI and privacy. With a focus on evidence-based text generation with LLMs, I develop methods that allow users to trace LLM-generated content back to their underlying sources through citations.
 
 ## Research Interests
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+- **Evidence-based Text Generation with LLMs:** Developing methods that enable large language models to generate traceable and verifiable responses by grounding their outputs in supporting evidence.
+- **Evidence Retrieval & Fact Verification:** Building retrieval and reasoning systems that identify scientific evidence for factual claims and improve the verification of multilingual scientific content.
+- **AI4Science:** Applying large language models to support scientific discovery by assessing the novelty of research ideas and assisting researchers in the scientific discovery process.
+- **Argument Mining & Stance Detection:** Investigating how computational methods can identify argumentative structures and detect supporting or opposing viewpoints in text and images.
+- **Smartwatch Privacy:** Studying privacy risks in wearable sensor data and developing methods to protect sensitive health information against re-identification attacks while preserving data utility.
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Jul. 2026]** Our survey paper *Attribution, Citation, and Quotation: A Survey of Evidence-based Text Generation with Large Language Models* was published at **ACL 2026**.
+- **[Oct. 2025]** Our paper *SQuAI: Scientific Question-Answering with Multi-Agent Retrieval-Augmented Generation* was published at **CIKM 2025**.
+- **[Aug. 2025]** Our paper *Slice it up: Unmasking User Identities in Smartwatch Health Data* was published at **AsiaCCS 2025**.
+- **[Jun. 2025]** Our paper *RAGentA: Multi-Agent Retrieval-Augmented Generation for Attributed Question Answering* was published at the **SIGIR 2025 LiveRAG Challenge**.
+- **[Sept. 2023]** Our paper *Touché 2022 Best of Labs: Neural Image Retrieval for Argumentation* was published as a **Best of Labs** paper at **CLEF 2023**.
+- **[Jul. 2023]** Our paper *On Stance Detection in Image Retrieval for Argumentation* was published at **SIGIR 2023**.
+- **[Sept. 2022]** Our paper *Aramis at Touché 2022: Argument Detection in Pictures using Machine Learning* was published at the **Touché Lab** of **CLEF 2022**.
+
 
 {% include_relative _includes/publications.md %}
 
