@@ -25,9 +25,9 @@ I am a Ph.D. student at TU Dresden and ScaDS.AI. My research interests lie in th
   - Focus: Data Analytics, Natural Language Processing
 
 **Professional Experience**
-- Research Associate, TU Dresden & ScaDS.AI (since 2024)
+- **Research Associate**, TU Dresden & ScaDS.AI (since 2024)
   - Research on evidence-based text generation with LLMs.
-- Research Assistant, Leipzig University & ScaDS.AI (2022–2024)
+- **Research Assistant**, Leipzig University & ScaDS.AI (2022–2024)
   - Research on privacy-preserving machine learning.
 
 ## News
