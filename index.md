@@ -25,6 +25,6 @@ I am a Ph.D. student at TU Dresden and ScaDS.AI. My research interests lie in th
 - **[Sept. 2022]** Our paper *Aramis at Touché 2022: Argument Detection in Pictures using Machine Learning* was published at the **Touché Lab** of **CLEF 2022**.
 
 
-{% include_relative _includes/publications.md %}
+% {% include_relative _includes/publications.md %}
 
-{% include_relative _includes/services.md %}
+% {% include_relative _includes/services.md %}
