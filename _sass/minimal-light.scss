@@ -595,3 +595,38 @@ footer {
   display:none;
   font-family: monospace;
 }
+
+/* Larger desktop profile column */
+@media screen and (min-width: 961px) {
+  .wrapper {
+    width: 980px;
+  }
+
+  header,
+  footer {
+    width: 270px;
+  }
+
+  #header .image.avatar {
+    display: block;
+    width: 180px;
+    margin: 0 auto 1.25em;
+  }
+
+  .image.avatar img {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  header p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+}
