@@ -23,6 +23,7 @@ I am a Ph.D. student at TU Dresden and ScaDS.AI. My research interests lie in th
 - **B.Sc. Management Information Systems**, University of Regensburg (2018–2021)
   - Thesis: *Verifying the Currency of Textual Data: Open Information Extraction for Structured Knowledge Retrieval*
   - Focus: Data Analytics, Natural Language Processing
+
 **Professional Experience**
 - **Research Associate**, TU Dresden & ScaDS.AI (since 2024)
   - Research on evidence-based text generation with LLMs.
