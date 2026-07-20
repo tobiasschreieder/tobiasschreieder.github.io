@@ -1,5 +1,29 @@
 main:
 
+  - title: "Attribution, Citation, and Quotation: A Survey of Evidence-based Text Generation with Large Language Models"
+    authors: "<strong>Tobias Schreieder</strong>, Tim Schopf, Michael Färber"
+    conference_short: "ACL'2026"
+    conference: "Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 2026."
+    pdf: "https://aclanthology.org/2026.acl-long.1430/"
+    code: "https://github.com/faerber-lab/AttributeCiteQuote"
+    image: "./assets/img/acl2026_survey.png"
+
+  - title: "SQuAI: Scientific Question-Answering with Multi-Agent Retrieval-Augmented Generation"
+    authors: "<strong>Tobias Schreieder</strong>, Michael Färber"
+    conference_short: "CLEF'2025"
+    conference: "International Conference of the Cross-Language Evaluation Forum for European Languages, 2023."
+    pdf: "https://ceur-ws.org/Vol-4038/paper_94.pdf"
+    code: "https://github.com/faerber-lab/Claim2Source"
+    image: "./assets/img/clef2025_style.png"
+
+  - title: "Claim2Source at CheckThat! 2025: Zero-Shot Style Transfer for Scientific Claim-Source Retrieval"
+    authors: "Ines Besrour, Jingbo He, <strong>Tobias Schreieder</strong>, Michael Färber"
+    conference_short: "CIKM'2025"
+    conference: "ACM International Conference on Information and Knowledge Management, 2025."
+    pdf: "https://dl.acm.org/doi/10.1145/3746252.3761471"
+    code: "https://github.com/faerber-lab/SQuAI"
+    image: "./assets/img/cikm2025_squai.png"
+
   - title: "Slice it up: Unmasking User Identities in Smartwatch Health Data"
     authors: "Lucas Lange, <strong>Tobias Schreieder</strong>, Victor Christen, Erhard Rahm"
     conference_short: "AsiaCCS'2025"
