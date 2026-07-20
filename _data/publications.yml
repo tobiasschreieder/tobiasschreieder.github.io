@@ -1,19 +1,19 @@
 main:
 
-  - title: Aramis at Touché 2022: Argument Detection in Pictures using Machine Learning
-    authors: Jan Braker, Lorenz Heinemann, <strong>Tobias Schreieder</strong>
-    conference_short: CLEF (Working Notes)
-    conference: International Conference of the Cross-Language Evaluation Forum for European Languages, 2022.
-    pdf: https://ceur-ws.org/Vol-3180/paper-252.pdf
-    code: https://github.com/tobiasschreieder/aramis-image-argument-search
-    image: ./assets/img/clef2022_aramis.png
-    notes: Touché Working Notes
+  - title: "Aramis at Touché 2022: Argument Detection in Pictures using Machine Learning"
+    authors: "Jan Braker, Lorenz Heinemann, <strong>Tobias Schreieder</strong>"
+    conference_short: "CLEF (Working Notes)"
+    conference: "International Conference of the Cross-Language Evaluation Forum for European Languages, 2022."
+    pdf: "https://ceur-ws.org/Vol-3180/paper-252.pdf"
+    code: "https://github.com/tobiasschreieder/aramis-image-argument-search"
+    image: "./assets/img/clef2022_aramis.png"
+    notes: "Touché Working Notes"
 
-  - title: On Stance Detection in Image Retrieval for Argumentation
-    authors: Jan Braker, Lorenz Heinemann, <strong>Tobias Schreieder</strong>, Johannes Kiesel, Maik Fröbe, Martin Potthast, Benno Stein
-    conference_short: SIGIR
-    conference: International ACM SIGIR Conference on Research and Development in Information Retrieval, 2023.
-    pdf: https://dl.acm.org/doi/pdf/10.1145/3539618.3591917
-    code: https://github.com/webis-de/SIGIR-23
-    notes: Reproducibility Paper
-    image: ./assets/img/sigir2023_stance.png
+  - title: "On Stance Detection in Image Retrieval for Argumentation"
+    authors: "Jan Braker, Lorenz Heinemann, <strong>Tobias Schreieder</strong>, Johannes Kiesel, Maik Fröbe, Martin Potthast, Benno Stein"
+    conference_short: "SIGIR"
+    conference: "International ACM SIGIR Conference on Research and Development in Information Retrieval, 2023."
+    pdf: "https://dl.acm.org/doi/pdf/10.1145/3539618.3591917"
+    code: "https://github.com/webis-de/SIGIR-23"
+    notes: "Reproducibility Paper"
+    image: "./assets/img/sigir2023_stance.png"
