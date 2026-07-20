@@ -1,34 +1,107 @@
 <h2 id="publications" style="margin: 2px 0 -15px;">Publications</h2>
 
+<style>
+.publication-entry {
+  margin-bottom: 30px;
+}
+
+.pub-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  column-gap: 24px;
+  align-items: start;
+}
+
+.publication-image-column {
+  width: 180px;
+}
+
+.publication-image-box {
+  width: 180px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.publication-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.publication-text-column {
+  min-width: 0;
+}
+
+.publication-text-column .title {
+  font-size: 1.08em;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.publication-text-column .author {
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.publication-text-column .periodical {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.publication-text-column .links .btn {
+  font-size: 12px;
+  margin-right: 4px;
+}
+
+@media (max-width: 700px) {
+  .pub-row {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-image-column {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .publication-image-box {
+    width: 220px;
+    height: 140px;
+  }
+}
+</style>
+
 <div class="publications">
   <ol class="bibliography">
 
     {% for link in site.data.publications.main %}
 
-    <li>
+    <li class="publication-entry">
+
       <div class="pub-row">
 
-        <div
-          class="col-sm-3 abbr"
-          style="position: relative; padding-right: 15px; padding-left: 15px;">
+        <div class="publication-image-column">
 
           {% if link.image %}
-          <img
-            src="{{ link.image | relative_url }}"
-            alt="Preview image for {{ link.title }}"
-            class="teaser img-fluid z-depth-1"
-            style="width: 100%; height: auto;">
+          <div class="publication-image-box">
+            <img
+              src="{{ link.image | relative_url }}"
+              alt="Preview image for {{ link.title }}"
+              class="publication-image teaser img-fluid z-depth-1">
+          </div>
+          {% endif %}
 
-            {% if link.conference_short %}
-            <abbr class="badge">{{ link.conference_short }}</abbr>
-            {% endif %}
+          {% if link.conference_short %}
+          <abbr class="badge">{{ link.conference_short }}</abbr>
           {% endif %}
 
         </div>
 
-        <div
-          class="col-sm-9"
-          style="position: relative; padding-right: 15px; padding-left: 20px;">
+        <div class="publication-text-column">
 
           <div class="title">
             {% if link.pdf %}
@@ -53,58 +126,44 @@
           <div class="links">
 
             {% if link.pdf %}
-            <a
-              href="{{ link.pdf }}"
-              class="btn btn-sm z-depth-0"
-              role="button"
-              target="_blank"
-              rel="noopener"
-              style="font-size: 12px;">
+            <a href="{{ link.pdf }}"
+               class="btn btn-sm z-depth-0"
+               target="_blank"
+               rel="noopener">
               PDF
             </a>
             {% endif %}
 
             {% if link.code %}
-            <a
-              href="{{ link.code }}"
-              class="btn btn-sm z-depth-0"
-              role="button"
-              target="_blank"
-              rel="noopener"
-              style="font-size: 12px;">
+            <a href="{{ link.code }}"
+               class="btn btn-sm z-depth-0"
+               target="_blank"
+               rel="noopener">
               Code
             </a>
             {% endif %}
 
             {% if link.page %}
-            <a
-              href="{{ link.page }}"
-              class="btn btn-sm z-depth-0"
-              role="button"
-              target="_blank"
-              rel="noopener"
-              style="font-size: 12px;">
+            <a href="{{ link.page }}"
+               class="btn btn-sm z-depth-0"
+               target="_blank"
+               rel="noopener">
               Project Page
             </a>
             {% endif %}
 
             {% if link.bibtex %}
-            <a
-              href="{{ link.bibtex }}"
-              class="btn btn-sm z-depth-0"
-              role="button"
-              target="_blank"
-              rel="noopener"
-              style="font-size: 12px;">
+            <a href="{{ link.bibtex }}"
+               class="btn btn-sm z-depth-0"
+               target="_blank"
+               rel="noopener">
               BibTeX
             </a>
             {% endif %}
 
             {% if link.notes %}
             <strong>
-              <i style="color: #e74d3c;">
-                {{ link.notes }}
-              </i>
+              <i style="color:#e74d3c">{{ link.notes }}</i>
             </strong>
             {% endif %}
 
@@ -113,11 +172,12 @@
             {% endif %}
 
           </div>
-        </div>
-      </div>
-    </li>
 
-    <br>
+        </div>
+
+      </div>
+
+    </li>
 
     {% endfor %}
 
