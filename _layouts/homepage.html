@@ -83,13 +83,15 @@
 
     <style>
       .page-nav {
-        margin-top: 18px;
-        line-height: 1.9;
+        margin: 0 0 28px 0;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e5e5e5;
+        line-height: 1.8;
       }
 
       .page-nav a {
         display: inline-block;
-        margin-right: 14px;
+        margin-right: 18px;
         font-size: 0.95rem;
         font-weight: 600;
         text-decoration: none;
@@ -99,10 +101,7 @@
         margin-right: 0;
       }
 
-      .page-nav a:hover {
-        text-decoration: underline;
-      }
-
+      .page-nav a:hover,
       .page-nav a.active {
         text-decoration: underline;
         text-underline-offset: 4px;
@@ -110,7 +109,8 @@
 
       @media print, screen and (max-width: 960px) {
         .page-nav {
-          margin-bottom: 20px;
+          margin-top: 10px;
+          margin-bottom: 24px;
         }
       }
     </style>
@@ -122,7 +122,9 @@
 
         {% if site.avatar %}
         <a class="image avatar">
-          <img src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.title }}">
+          <img
+            src="{{ site.avatar | relative_url }}"
+            alt="Portrait of {{ site.title }}">
         </a>
         {% endif %}
 
@@ -136,13 +138,13 @@
         {% endif %}
 
         {% if site.affiliation %}
-        {% if site.affiliation_link %}
-        <a href="{{ site.affiliation_link }}" rel="noopener">
+          {% if site.affiliation_link %}
+          <a href="{{ site.affiliation_link }}" rel="noopener">
+            <autocolor>{{ site.affiliation }}</autocolor>
+          </a>
+          {% else %}
           <autocolor>{{ site.affiliation }}</autocolor>
-        </a>
-        {% else %}
-        <autocolor>{{ site.affiliation }}</autocolor>
-        {% endif %}
+          {% endif %}
         <br>
         {% endif %}
 
@@ -161,7 +163,10 @@
             aria-label="Google Scholar"
             target="_blank"
             rel="noopener">
-            <i class="ai ai-google-scholar" style="font-size: 1.2rem;"></i>
+            <i
+              class="ai ai-google-scholar"
+              style="font-size: 1.2rem;">
+            </i>
           </a>
           {% endif %}
 
@@ -170,7 +175,10 @@
             style="margin: 0 5px 0 0"
             href="{{ site.cv_link | relative_url }}"
             aria-label="Curriculum Vitae">
-            <i class="ai ai-cv" style="font-size: 1.3rem;"></i>
+            <i
+              class="ai ai-cv"
+              style="font-size: 1.3rem;">
+            </i>
           </a>
           {% endif %}
 
@@ -207,6 +215,11 @@
           {% endif %}
         </div>
 
+        <br>
+      </header>
+
+      <section>
+
         <nav class="page-nav" aria-label="Main navigation">
           <a
             href="{{ '/' | relative_url }}"
@@ -239,9 +252,6 @@
           </a>
         </nav>
 
-      </header>
-
-      <section>
         {{ content }}
 
         <br>
@@ -260,6 +270,7 @@
           </small>
         </p>
         {% endif %}
+
       </section>
 
       <footer>
@@ -281,8 +292,13 @@
         a.async = 1;
         a.src = g;
         m.parentNode.insertBefore(a,m);
-      })(window, document, 'script',
-         'https://www.google-analytics.com/analytics.js', 'ga');
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga'
+      );
 
       ga('create', '{{ site.google_analytics }}', 'auto');
       ga('send', 'pageview');
