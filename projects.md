@@ -33,10 +33,8 @@ The collaboration with Springer Nature provides access to large-scale scientific
 | **Partners** | [TU Dresden](https://tu-dresden.de/?set_language=en) \| [ScaDS.AI Dresden/Leipzig](https://scads.ai/) & WeichertMehner |
 | **Duration** | April 2026 – September 2028 |
 
-AICOM develops trustworthy enterprise AI assistants by combining large language models with corporate knowledge graphs. Instead of relying solely on model memory, the system retrieves evidence from structured and unstructured organizational knowledge, enabling answers that are traceable, verifiable, and grounded in company-specific information.
+**AICOM** develops trustworthy enterprise AI assistants by combining LLMs with corporate knowledge graphs. Instead of relying solely on model memory, the system retrieves evidence from structured and unstructured organizational knowledge, enabling answers that are traceable, verifiable, and grounded in company-specific information.
 
-The project investigates knowledge graph construction and maintenance, retrieval-augmented generation over enterprise knowledge, and methods for assessing answer quality through evidence coverage, consistency, and source traceability. The resulting assistant is designed to support knowledge-intensive workflows such as documentation, reporting, and decision support while increasing transparency and trustworthiness.
-
-As a contributing researcher, I participate in the project's research activities, methodological development, and scientific collaboration within the TU Dresden and ScaDS.AI research team.
+The project investigates knowledge graph construction and maintenance, retrieval-augmented generation over enterprise knowledge, and methods for assessing answer quality through evidence coverage, consistency, and source traceability. The resulting assistant will support knowledge-intensive workflows such as documentation, reporting, and decision support while increasing transparency and trustworthiness.
 
 **Project page:** [AICOM](https://faerber-lab.github.io/projects/aicom/)
