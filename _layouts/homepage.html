@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -88,7 +89,7 @@
         border-bottom: 1px solid #e5e5e5;
         line-height: 1.8;
       }
-    
+
       .page-nav a {
         display: inline-block;
         margin-right: 24px;
@@ -98,11 +99,11 @@
         text-decoration: none;
         transition: color 0.2s ease;
       }
-    
+
       .page-nav a:last-child {
         margin-right: 0;
       }
-    
+
       .page-nav a:hover {
         color: #245A35;
         text-decoration: underline;
@@ -110,7 +111,7 @@
         text-decoration-thickness: 2px;
         text-underline-offset: 5px;
       }
-    
+
       .page-nav a.active {
         color: #2E6F40;
         font-weight: 800;
@@ -119,19 +120,19 @@
         text-decoration-thickness: 3px;
         text-underline-offset: 5px;
       }
-    
+
       @media print, screen and (max-width: 960px) {
         .page-nav {
           margin-top: 10px;
           margin-bottom: 24px;
         }
-    
+
         .page-nav a {
           margin-right: 18px;
           font-size: 1.2rem;
         }
       }
-    
+
       @media print, screen and (max-width: 480px) {
         .page-nav a {
           display: block;
@@ -276,6 +277,12 @@
             {% if page.url contains "/talks" %}class="active"{% endif %}>
             Talks
           </a>
+
+          <a
+            href="{{ '/cv/' | relative_url }}"
+            {% if page.url contains "/cv" %}class="active"{% endif %}>
+            CV
+          </a>
         </nav>
 
         {{ content }}
@@ -332,3 +339,4 @@
     {% endif %}
   </body>
 </html>
+```
