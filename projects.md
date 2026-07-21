@@ -4,8 +4,6 @@ title: Projects
 permalink: /projects/
 ---
 
-{% include_relative _includes/projects.md %}
-
 ## EVIDENZ: Evidence-Based Text Generation with Large Language Models 
 
 **Role:** Project Lead 
