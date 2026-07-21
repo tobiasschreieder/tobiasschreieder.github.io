@@ -19,7 +19,7 @@ I supervise student research projects in the areas of natural language processin
 
 **Open project topics:** See the **[list of available student research projects](https://faerber-lab.github.io/proposed-student-projects/)**.
 
-### Completed Projects
+### Supervised Projects
 
 | Project | Status |
 |:--------|:------:|
@@ -33,7 +33,7 @@ I supervise bachelor's and master's theses at TU Dresden and in collaboration wi
 
 **Open thesis topics:** See the **[list of available thesis topics](https://scads.ai/education/theses/)**.
 
-### Completed Theses
+### Supervised Theses
 
 | Thesis | Degree | Institution | Status |
 |:--------|:------:|:------------|:------:|
