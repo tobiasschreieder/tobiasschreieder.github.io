@@ -9,7 +9,7 @@ permalink: /projects/
 | | |
 |---|---|
 | **Role** | Project Lead |
-| **Partners** | [TU Dresden](https://tu-dresden.de/?set_language=en) \| [ScaDS.AI Dresden/Leipzig](https://scads.ai/) & Holtzbrinck \| Springer Nature] |
+| **Partners** | [TU Dresden](https://tu-dresden.de/?set_language=en) \| [ScaDS.AI Dresden/Leipzig](https://scads.ai/) & Holtzbrinck \| Springer Nature |
 | **Duration** | January 2026 – December 2027 |
 | **Funding** | €115,000 through the [Software Campus](https://softwarecampus.de/en/) program funded by the German Federal Ministry of Research, Technology and Space (BMFTR) |
 
