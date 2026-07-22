@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <title>
@@ -9,337 +10,392 @@
       {% endif %}
     </title>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+```
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="{{ site.description }}">
+<meta name="description" content="{{ site.description }}">
 
-    {% if site.keywords %}
-    <meta name="keywords" content="{{ site.keywords }}">
-    {% endif %}
+{% if site.keywords %}
+<meta name="keywords" content="{{ site.keywords }}">
+{% endif %}
 
-    <link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 
-    {% if site.favicon_dark %}
-    <link
-      rel="icon"
-      media="(prefers-color-scheme: dark)"
-      href="{{ site.favicon_dark | relative_url }}"
-      type="image/png">
-    {% endif %}
+{% if site.favicon_dark %}
+<link
+  rel="icon"
+  media="(prefers-color-scheme: dark)"
+  href="{{ site.favicon_dark | relative_url }}"
+  type="image/png">
+{% endif %}
 
-    {% if site.favicon %}
-    <link
-      rel="icon"
-      media="(prefers-color-scheme: light)"
-      href="{{ site.favicon | relative_url }}"
-      type="image/png">
-    {% endif %}
+{% if site.favicon %}
+<link
+  rel="icon"
+  media="(prefers-color-scheme: light)"
+  href="{{ site.favicon | relative_url }}"
+  type="image/png">
+{% endif %}
 
-    <script
-      src="{{ '/assets/js/favicon-switcher.js' | relative_url }}"
-      type="application/javascript">
-    </script>
+<script
+  src="{{ '/assets/js/favicon-switcher.js' | relative_url }}"
+  type="application/javascript">
+</script>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
-      integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw="
-      crossorigin="anonymous">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
+  integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw="
+  crossorigin="anonymous">
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer">
 
-    {% if site.font == "Sans Serif" %}
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/font_sans_serif.css' | relative_url }}">
-    {% else %}
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/font.css' | relative_url }}">
-    {% endif %}
+{% if site.font == "Sans Serif" %}
+<link
+  rel="stylesheet"
+  href="{{ '/assets/css/font_sans_serif.css' | relative_url }}">
+{% else %}
+<link
+  rel="stylesheet"
+  href="{{ '/assets/css/font.css' | relative_url }}">
+{% endif %}
 
-    {% if site.auto_dark_mode %}
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/style.css' | relative_url }}">
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/publications.css' | relative_url }}">
-    {% else %}
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/style-no-dark-mode.css' | relative_url }}">
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/publications-no-dark-mode.css' | relative_url }}">
-    {% endif %}
+{% if site.auto_dark_mode %}
+<link
+  rel="stylesheet"
+  href="{{ '/assets/css/style.css' | relative_url }}">
+<link
+  rel="stylesheet"
+  href="{{ '/assets/css/publications.css' | relative_url }}">
+{% else %}
+<link
+  rel="stylesheet"
+  href="{{ '/assets/css/style-no-dark-mode.css' | relative_url }}">
+<link
+  rel="stylesheet"
+  href="{{ '/assets/css/publications-no-dark-mode.css' | relative_url }}">
+{% endif %}
 
-    <style>
-      .page-nav {
-        margin: 0 0 30px 0;
-        padding-bottom: 12px;
-        border-bottom: 1px solid #e5e5e5;
-        line-height: 1.8;
-      }
+<style>
+  .page-nav {
+    position: sticky;
+    top: 12px;
+    z-index: 1000;
 
-      .page-nav a {
-        display: inline-block;
-        margin-right: 24px;
-        color: #2E6F40;
-        font-size: 1.25rem;
-        font-weight: 600;
-        text-decoration: none;
-        transition: color 0.2s ease;
-      }
+    margin: 0 0 30px 0;
+    padding: 12px 18px;
 
-      .page-nav a:last-child {
-        margin-right: 0;
-      }
+    background: rgba(248, 249, 250, 0.97);
+    border: 1px solid #dfe3e8;
+    border-radius: 6px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.09);
 
-      .page-nav a:hover {
-        color: #245A35;
-        text-decoration: underline;
-        text-decoration-color: #2E6F40;
-        text-decoration-thickness: 2px;
-        text-underline-offset: 5px;
-      }
+    line-height: 1.8;
 
-      .page-nav a.active {
-        color: #2E6F40;
-        font-weight: 800;
-        text-decoration: underline;
-        text-decoration-color: #2E6F40;
-        text-decoration-thickness: 3px;
-        text-underline-offset: 5px;
-      }
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
 
-      @media print, screen and (max-width: 960px) {
-        .page-nav {
-          margin-top: 10px;
-          margin-bottom: 24px;
-        }
+  .page-nav a {
+    display: inline-block;
+    margin-right: 22px;
 
-        .page-nav a {
-          margin-right: 18px;
-          font-size: 1.2rem;
-        }
-      }
+    color: #267CB9;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-decoration: none;
 
-      @media print, screen and (max-width: 480px) {
-        .page-nav a {
-          display: block;
-          margin-right: 0;
-          margin-bottom: 6px;
-        }
-      }
-    </style>
+    transition:
+      color 0.2s ease,
+      text-decoration-color 0.2s ease;
+  }
+
+  .page-nav a:last-child {
+    margin-right: 0;
+  }
+
+  .page-nav a:hover {
+    color: #174f7a;
+    text-decoration: underline;
+    text-decoration-color: #267CB9;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
+
+  .page-nav a.active {
+    color: #174f7a;
+    font-weight: 750;
+    text-decoration: underline;
+    text-decoration-color: #267CB9;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+  }
+
+  .pronouns {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+  }
+
+  @media print {
+    .page-nav {
+      position: static;
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .page-nav {
+      top: 8px;
+      margin-top: 10px;
+      margin-bottom: 24px;
+      padding: 10px 14px;
+    }
+
+    .page-nav a {
+      margin-right: 16px;
+      font-size: 1.08rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .page-nav {
+      display: flex;
+      gap: 8px 18px;
+      overflow-x: auto;
+
+      top: 0;
+      margin-left: -10px;
+      margin-right: -10px;
+      padding: 10px 12px;
+
+      border-radius: 0;
+      white-space: nowrap;
+
+      scrollbar-width: thin;
+    }
+
+    .page-nav a {
+      flex: 0 0 auto;
+      margin-right: 0;
+      font-size: 1rem;
+    }
+  }
+</style>
+```
+
   </head>
 
   <body>
     <div class="wrapper">
       <header>
 
-        {% if site.avatar %}
-        <a class="image avatar">
-          <img
-            src="{{ site.avatar | relative_url }}"
-            alt="Portrait of {{ site.title }}">
-        </a>
-        {% endif %}
+```
+    {% if site.avatar %}
+    <a class="image avatar">
+      <img
+        src="{{ site.avatar | relative_url }}"
+        alt="Portrait of {{ site.title }}">
+    </a>
+    {% endif %}
 
-        <h1>{{ site.title }}</h1>
+    <h1>{{ site.title }}</h1>
 
-        {% if site.position %}
-        <position style="font-size: 1.10rem;">
-          {{ site.position }}
-        </position>
-        <br>
-        {% endif %}
+    {% if site.position %}
+    <position style="font-size: 1.10rem;">
+      {{ site.position }}
+    </position>
+    <br>
+    {% endif %}
 
-        {% if site.affiliation %}
-          {% if site.affiliation_link %}
-          <a href="{{ site.affiliation_link }}" rel="noopener">
-            <autocolor>{{ site.affiliation }}</autocolor>
-          </a>
-          {% else %}
-          <autocolor>{{ site.affiliation }}</autocolor>
-          {% endif %}
-        <br>
-        {% endif %}
+    {% if site.affiliation %}
+      {% if site.affiliation_link %}
+      <a href="{{ site.affiliation_link }}" rel="noopener">
+        <autocolor>{{ site.affiliation }}</autocolor>
+      </a>
+      {% else %}
+      <autocolor>{{ site.affiliation }}</autocolor>
+      {% endif %}
+    <br>
+    {% endif %}
 
-        {% if site.email %}
-        <email>{{ site.email }}</email>
-        {% endif %}
-        
-        {% if site.pronouns %}
-        <br>
-        <span class="pronouns">{{ site.pronouns }}</span>
-        {% endif %}
-        
-        <br>
-        <br>
+    {% if site.email %}
+    <email>{{ site.email }}</email>
+    {% endif %}
 
-        <div class="social-icons">
-          {% if site.google_scholar %}
-          <a
-            style="margin: 0 5px 0 0"
-            href="{{ site.google_scholar }}"
-            aria-label="Google Scholar"
-            target="_blank"
-            rel="noopener">
-            <i
-              class="ai ai-google-scholar"
-              style="font-size: 1.2rem;">
-            </i>
-          </a>
-          {% endif %}
+    {% if site.pronouns %}
+    <br>
+    <span class="pronouns">{{ site.pronouns }}</span>
+    {% endif %}
 
-          {% if site.cv_link %}
-          <a
-            style="margin: 0 5px 0 0"
-            href="{{ site.cv_link | relative_url }}"
-            aria-label="Curriculum Vitae">
-            <i
-              class="ai ai-cv"
-              style="font-size: 1.3rem;">
-            </i>
-          </a>
-          {% endif %}
+    <br>
+    <br>
 
-          {% if site.github_link %}
-          <a
-            style="margin: 0 5px 0 0"
-            href="{{ site.github_link }}"
-            aria-label="GitHub"
-            target="_blank"
-            rel="noopener">
-            <i class="fab fa-github"></i>
-          </a>
-          {% endif %}
+    <div class="social-icons">
+      {% if site.google_scholar %}
+      <a
+        style="margin: 0 5px 0 0"
+        href="{{ site.google_scholar }}"
+        aria-label="Google Scholar"
+        target="_blank"
+        rel="noopener">
+        <i
+          class="ai ai-google-scholar"
+          style="font-size: 1.2rem;">
+        </i>
+      </a>
+      {% endif %}
 
-          {% if site.linkedin %}
-          <a
-            style="margin: 0 5px 0 0"
-            href="{{ site.linkedin }}"
-            aria-label="LinkedIn"
-            target="_blank"
-            rel="noopener">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          {% endif %}
+      {% if site.cv_link %}
+      <a
+        style="margin: 0 5px 0 0"
+        href="{{ site.cv_link | relative_url }}"
+        aria-label="Curriculum Vitae">
+        <i
+          class="ai ai-cv"
+          style="font-size: 1.3rem;">
+        </i>
+      </a>
+      {% endif %}
 
-          {% if site.twitter %}
-          <a
-            href="{{ site.twitter }}"
-            aria-label="X or Twitter"
-            target="_blank"
-            rel="noopener">
-            <i class="fab fa-x-twitter"></i>
-          </a>
-          {% endif %}
-        </div>
+      {% if site.github_link %}
+      <a
+        style="margin: 0 5px 0 0"
+        href="{{ site.github_link }}"
+        aria-label="GitHub"
+        target="_blank"
+        rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+      {% endif %}
 
-        <br>
-      </header>
+      {% if site.linkedin %}
+      <a
+        style="margin: 0 5px 0 0"
+        href="{{ site.linkedin }}"
+        aria-label="LinkedIn"
+        target="_blank"
+        rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      {% endif %}
 
-      <section>
-
-        <nav class="page-nav" aria-label="Main navigation">
-          <a
-            href="{{ '/' | relative_url }}"
-            {% if page.url == "/" %}class="active"{% endif %}>
-            Home
-          </a>
-
-          <a
-            href="{{ '/publications/' | relative_url }}"
-            {% if page.url contains "/publications" %}class="active"{% endif %}>
-            Publications
-          </a>
-
-          <a
-            href="{{ '/projects/' | relative_url }}"
-            {% if page.url contains "/projects" %}class="active"{% endif %}>
-            Projects
-          </a>
-
-          <a
-            href="{{ '/teaching/' | relative_url }}"
-            {% if page.url contains "/teaching" %}class="active"{% endif %}>
-            Teaching
-          </a>
-
-          <a
-            href="{{ '/talks/' | relative_url }}"
-            {% if page.url contains "/talks" %}class="active"{% endif %}>
-            Talks
-          </a>
-
-          <a
-            href="{{ '/cv/' | relative_url }}"
-            {% if page.url contains "/cv" %}class="active"{% endif %}>
-            CV
-          </a>
-        </nav>
-
-        {{ content }}
-
-        <br>
-
-        {% if site.enable_footnote %}
-        <p>
-          <small>
-            Powered by Jekyll and
-            <a
-              href="https://github.com/yaoyao-liu/minimal-light"
-              target="_blank"
-              rel="noopener">
-              Minimal Light
-            </a>
-            theme.
-          </small>
-        </p>
-        {% endif %}
-
-      </section>
-
-      <footer>
-      </footer>
+      {% if site.twitter %}
+      <a
+        href="{{ site.twitter }}"
+        aria-label="X or Twitter"
+        target="_blank"
+        rel="noopener">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      {% endif %}
     </div>
 
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <br>
+  </header>
 
-    {% if site.google_analytics %}
-    <script>
-      (function(i,s,o,g,r,a,m){
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function(){
-          (i[r].q = i[r].q || []).push(arguments);
-        };
-        i[r].l = 1 * new Date();
-        a = s.createElement(o);
-        m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a,m);
-      })(
-        window,
-        document,
-        'script',
-        'https://www.google-analytics.com/analytics.js',
-        'ga'
-      );
+  <section>
 
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
-    </script>
+    <nav class="page-nav" aria-label="Main navigation">
+      <a
+        href="{{ '/' | relative_url }}"
+        {% if page.url == "/" %}class="active"{% endif %}>
+        Home
+      </a>
+
+      <a
+        href="{{ '/publications/' | relative_url }}"
+        {% if page.url contains "/publications" %}class="active"{% endif %}>
+        Publications
+      </a>
+
+      <a
+        href="{{ '/projects/' | relative_url }}"
+        {% if page.url contains "/projects" %}class="active"{% endif %}>
+        Projects
+      </a>
+
+      <a
+        href="{{ '/teaching/' | relative_url }}"
+        {% if page.url contains "/teaching" %}class="active"{% endif %}>
+        Teaching
+      </a>
+
+      <a
+        href="{{ '/talks/' | relative_url }}"
+        {% if page.url contains "/talks" %}class="active"{% endif %}>
+        Talks
+      </a>
+
+      <a
+        href="{{ '/cv/' | relative_url }}"
+        {% if page.url contains "/cv" %}class="active"{% endif %}>
+        CV
+      </a>
+    </nav>
+
+    {{ content }}
+
+    <br>
+
+    {% if site.enable_footnote %}
+    <p>
+      <small>
+        Powered by Jekyll and
+        <a
+          href="https://github.com/yaoyao-liu/minimal-light"
+          target="_blank"
+          rel="noopener">
+          Minimal Light
+        </a>
+        theme.
+      </small>
+    </p>
     {% endif %}
+
+  </section>
+
+  <footer>
+  </footer>
+</div>
+
+<script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+
+{% if site.google_analytics %}
+<script>
+  (function(i,s,o,g,r,a,m){
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function(){
+      (i[r].q = i[r].q || []).push(arguments);
+    };
+    i[r].l = 1 * new Date();
+    a = s.createElement(o);
+    m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a,m);
+  })(
+    window,
+    document,
+    'script',
+    'https://www.google-analytics.com/analytics.js',
+    'ga'
+  );
+
+  ga('create', '{{ site.google_analytics }}', 'auto');
+  ga('send', 'pageview');
+</script>
+{% endif %}
+```
+
   </body>
 </html>
