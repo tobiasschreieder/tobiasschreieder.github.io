@@ -2,7 +2,7 @@ main:
 
   - title: "Attribution, Citation, and Quotation: A Survey of Evidence-based Text Generation with Large Language Models"
     authors: "<strong>Tobias Schreieder</strong>, Tim Schopf, Michael Färber"
-    conference_short: "ACL'2026"
+    conference_short: "ACL 2026"
     conference: "Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 2026."
     pdf: "https://aclanthology.org/2026.acl-long.1430/"
     code: "https://github.com/faerber-lab/AttributeCiteQuote"
@@ -10,7 +10,7 @@ main:
 
   - title: "SQuAI: Scientific Question-Answering with Multi-Agent Retrieval-Augmented Generation"
     authors: "Ines Besrour, Jingbo He, <strong>Tobias Schreieder</strong>, Michael Färber"
-    conference_short: "CIKM'2025"
+    conference_short: "CIKM 2025"
     conference: "ACM International Conference on Information and Knowledge Management, 2025."
     pdf: "https://dl.acm.org/doi/10.1145/3746252.3761471"
     code: "https://github.com/faerber-lab/SQuAI"
@@ -18,7 +18,7 @@ main:
 
   - title: "Claim2Source at CheckThat! 2025: Zero-Shot Style Transfer for Scientific Claim-Source Retrieval"
     authors: "<strong>Tobias Schreieder</strong>, Michael Färber"
-    conference_short: "CLEF'2025"
+    conference_short: "CLEF 2025"
     conference: "International Conference of the Cross-Language Evaluation Forum for European Languages, 2025."
     pdf: "https://ceur-ws.org/Vol-4038/paper_94.pdf"
     code: "https://github.com/faerber-lab/Claim2Source"
@@ -26,7 +26,7 @@ main:
 
   - title: "Slice it up: Unmasking User Identities in Smartwatch Health Data"
     authors: "Lucas Lange, <strong>Tobias Schreieder</strong>, Victor Christen, Erhard Rahm"
-    conference_short: "AsiaCCS'2025"
+    conference_short: "AsiaCCS 2025"
     conference: "ACM ASIA Conference on Computer and Communications Security, 2025"
     pdf: "https://dl.acm.org/doi/10.1145/3708821.3710834"
     code: "https://github.com/tobiasschreieder/dtw-attacks"
@@ -34,7 +34,7 @@ main:
 
   - title: "RAGentA: Multi-Agent Retrieval-Augmented Generation for Attributed Question Answering"
     authors: "Ines Besrour, Jingbo He, <strong>Tobias Schreieder</strong>, Michael Färber"
-    conference_short: "SIGIR'2025"
+    conference_short: "SIGIR 2025"
     conference: "SIGIR LiveRAG Challenge, 2025"
     pdf: "https://arxiv.org/abs/2506.16988"
     code: "https://github.com/faerber-lab/RAGentA"
@@ -42,7 +42,7 @@ main:
 
   - title: "Touché 2022 Best of Labs: Neural Image Retrieval for Argumentation"
     authors: "<strong>Tobias Schreieder</strong>, Jan Braker"
-    conference_short: "CLEF'23"
+    conference_short: "CLEF 2023"
     conference: "International Conference of the Cross-Language Evaluation Forum for European Languages, 2023."
     pdf: "https://link.springer.com/chapter/10.1007/978-3-031-42448-9_16"
     code: "https://github.com/webis-de/SIGIR-23"
@@ -50,7 +50,7 @@ main:
 
   - title: "On Stance Detection in Image Retrieval for Argumentation"
     authors: "Jan Braker, Lorenz Heinemann, <strong>Tobias Schreieder</strong>, Johannes Kiesel, Maik Fröbe, Martin Potthast, Benno Stein"
-    conference_short: "SIGIR'23"
+    conference_short: "SIGIR 2023"
     conference: "International ACM SIGIR Conference on Research and Development in Information Retrieval, 2023."
     pdf: "https://dl.acm.org/doi/10.1145/3539618.3591917"
     code: "https://github.com/webis-de/SIGIR-23"
@@ -58,7 +58,7 @@ main:
     
   - title: "Aramis at Touché 2022: Argument Detection in Pictures using Machine Learning"
     authors: "Jan Braker, Lorenz Heinemann, <strong>Tobias Schreieder</strong>"
-    conference_short: "CLEF'22"
+    conference_short: "CLEF 2022"
     conference: "International Conference of the Cross-Language Evaluation Forum for European Languages, 2022."
     pdf: "https://ceur-ws.org/Vol-3180/paper-252.pdf"
     code: "https://github.com/tobiasschreieder/aramis-image-argument-search"
