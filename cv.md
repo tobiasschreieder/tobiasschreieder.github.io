@@ -5,6 +5,9 @@ permalink: /cv/
 ---
 
 ## Education
+- **Ph.D. Candidate in Computer Science**, TU Dresden (since 2024)
+  - Focus: Natural Language Processing, Information Retrieval, AI4Science, Trustworthy AI
+  - Supervisor: [Prof. Dr.-Ing. Michael Färber](https://faerber-lab.github.io/)
 - **M.Sc. Data Science**, Leipzig University (2021–2024)
   - Thesis: *Re-Identification Attacks on Smartwatch Health Data*
   - Focus: Information Retrieval, Natural Language Processing, Privacy
