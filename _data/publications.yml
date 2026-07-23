@@ -7,6 +7,7 @@ main:
     pdf: "https://arxiv.org/abs/2607.15875"
     code: "https://github.com/faerber-lab/CheckThat2026"
     image: "./assets/img/clef2026_reranking.png"
+    notes: "Best of Labs 2025"
 
   - title: "Claim2Source at CheckThat! 2026: Improving Multilingual Scientific Claim-Source Retrieval with Verification-based Re-Ranking"
     authors: "<strong>Tobias Schreieder</strong>, Harsh Khandelwal, Yu-Ling Zhong, Michael Färber"
@@ -64,6 +65,7 @@ main:
     pdf: "https://link.springer.com/chapter/10.1007/978-3-031-42448-9_16"
     code: "https://github.com/webis-de/SIGIR-23"
     image: "./assets/img/clef2023_neurargs.png"
+    notes: "Best of Labs 2022"
 
   - title: "On Stance Detection in Image Retrieval for Argumentation"
     authors: "Jan Braker, Lorenz Heinemann, <strong>Tobias Schreieder</strong>, Johannes Kiesel, Maik Fröbe, Martin Potthast, Benno Stein"
