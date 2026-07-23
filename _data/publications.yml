@@ -1,5 +1,22 @@
 main:
 
+  - title: "Scientific Claim-Source Retrieval Revisited: A Comparative Study of Style Transfer and Re-Ranking"
+    authors: "<strong>Tobias Schreieder</strong>, Harsh Khandelwal, Yu-Ling Zhong, Michael Färber"
+    conference_short: "CLEF 2026"
+    conference: "International Conference of the Cross-Language Evaluation Forum for European Languages, 2026."
+    pdf: "https://arxiv.org/abs/2607.15875"
+    code: "https://github.com/faerber-lab/CheckThat2026"
+    image: "./assets/img/clef2026_reranking.png"
+
+  - title: "Claim2Source at CheckThat! 2026: Improving Multilingual Scientific Claim-Source Retrieval with Verification-based Re-Ranking"
+    authors: "<strong>Tobias Schreieder</strong>, Harsh Khandelwal, Yu-Ling Zhong, Michael Färber"
+    conference_short: "CLEF 2026"
+    conference: "International Conference of the Cross-Language Evaluation Forum for European Languages, 2026."
+    pdf: "https://arxiv.org/abs/2607.04043"
+    code: "https://github.com/faerber-lab/CheckThat2026"
+    image: "./assets/img/clef2026_verification.png"
+    notes: "🏆 1st Place at the CheckThat! 2026 Shared Task"
+
   - title: "Attribution, Citation, and Quotation: A Survey of Evidence-based Text Generation with Large Language Models"
     authors: "<strong>Tobias Schreieder</strong>, Tim Schopf, Michael Färber"
     conference_short: "ACL 2026"
