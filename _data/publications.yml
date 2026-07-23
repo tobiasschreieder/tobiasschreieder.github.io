@@ -15,7 +15,7 @@ main:
     pdf: "https://arxiv.org/abs/2607.04043"
     code: "https://github.com/faerber-lab/CheckThat2026"
     image: "./assets/img/clef2026_verification.png"
-    notes: "🏆 1st Place at the CheckThat! 2026 Shared Task"
+    notes: "🏆 1st Place at the CheckThat! 2026"
 
   - title: "Attribution, Citation, and Quotation: A Survey of Evidence-based Text Generation with Large Language Models"
     authors: "<strong>Tobias Schreieder</strong>, Tim Schopf, Michael Färber"
