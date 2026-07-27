@@ -37,6 +37,6 @@ I supervise bachelor's and master's theses at TU Dresden and in collaboration wi
 
 | Thesis | Degree | Institution | Status |
 |:--------|:------:|:------------|:------:|
-| From Memorization to Generalization: On the Limits of Text Watermarks for Source Attribution in Large Language Models | Bachelor's Thesis | Leipzig University | Ongoing |
+| From Memorization to Generalization: On the Limits of Text Watermarks for Source Attribution in Large Language Models | Bachelor's Thesis | Leipzig University | Completed (2026) |
 | Automated Multi-Hop Dataset Generation for Benchmarking Cited Text Span Extraction in Scientific Question Answering | Bachelor's Thesis | Leipzig University | Ongoing |
 | Contextual Compression for Retrieval-Augmented Generation over Long Documents | Master's Thesis | TU Dresden | Ongoing |
