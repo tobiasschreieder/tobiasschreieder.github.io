@@ -16,11 +16,8 @@ I am a Ph.D. student at TU Dresden and ScaDS.AI. My research interests lie in th
 
 ## News
 
-- **[Jul. 2026]** Our survey paper *Attribution, Citation, and Quotation: A Survey of Evidence-based Text Generation with Large Language Models* was published at **ACL 2026**.
+- **[Jul. 2026]** I presented our survey paper *Attribution, Citation, and Quotation: A Survey of Evidence-based Text Generation with Large Language Models* at **ACL 2026** in San Diego, USA.
+- **[Jun. 2026]** Two papers were accepted at **CLEF 2026**: *Scientific Claim-Source Retrieval Revisited: A Comparative Study of Style Transfer and Re-Ranking*, following our selection for **Best of Labs 2025**, and *Claim2Source at CheckThat! 2026: Improving Multilingual Scientific Claim-Source Retrieval with Verification-based Re-Ranking*. Our *Claim2Source* system ranked **1st in the CheckThat! 2026 Task 1 on Source Retrieval for Scientific Web Claims**.
+- **[Jun. 2026]** I gave an invited talk on *Evidence-based Text Generation with Large Language Models* at the **ScaDS.AI Summer School 2026** in Leipzig and presented our demo system *SQuAI: Exploring Scientific Knowledge with AI* at **OUTPUT.DD** and the **Dresden Science Night**.
+- **[Jan. 2026]** Our research project *EVIDENZ: Evidence-Based Text Generation with Large Language Models* started. I lead the project in collaboration with **Springer Nature**. The project runs from 2026–2027 and is funded with **€115,000** through the **Software Campus** program funded by **BMFTR**.
 - **[Oct. 2025]** Our paper *SQuAI: Scientific Question-Answering with Multi-Agent Retrieval-Augmented Generation* was published at **CIKM 2025**.
-- **[Sept. 2025]** Our paper *Claim2Source at CheckThat! 2025: Zero-Shot Style Transfer for Scientific Claim-Source Retrieval* was published at the **CheckThat! Lab** of **CLEF 2025**
-- **[Aug. 2025]** Our paper *Slice it up: Unmasking User Identities in Smartwatch Health Data* was published at **AsiaCCS 2025**.
-- **[Jun. 2025]** Our paper *RAGentA: Multi-Agent Retrieval-Augmented Generation for Attributed Question Answering* was published at the **SIGIR 2025 LiveRAG Challenge**.
-- **[Sept. 2023]** Our paper *Touché 2022 Best of Labs: Neural Image Retrieval for Argumentation* was published as a **Best of Labs** paper at **CLEF 2023**.
-- **[Jul. 2023]** Our paper *On Stance Detection in Image Retrieval for Argumentation* was published at **SIGIR 2023**.
-- **[Sept. 2022]** Our paper *Aramis at Touché 2022: Argument Detection in Pictures using Machine Learning* was published at the **Touché Lab** of **CLEF 2022**.
