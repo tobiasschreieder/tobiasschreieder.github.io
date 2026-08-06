@@ -4,7 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at TU Dresden and ScaDS.AI. My research interests lie in the areas of natural language processing, information retrieval, trustworthy AI and privacy. With a focus on evidence-based text generation with LLMs, I develop methods that allow users to trace LLM-generated content back to their underlying sources through citations.
+I am a Ph.D. student at TU Dresden and ScaDS.AI. My research interests lie in the areas of Natural Language Processing, Information Retrieval, Trustworthy AI and AI4Science. With a focus on evidence-based text generation with LLMs, I develop methods that allow users to trace LLM-generated content back to their underlying sources through citations.
 
 ## Research Interests
 
