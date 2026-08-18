@@ -2,10 +2,12 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <title>
-      {% if page.title and page.title != "Home" %}
+      {% if page.url == "/" %}
+        {{ site.title }} | Ph.D. Student at TU Dresden & ScaDS.AI
+      {% elsif page.title %}
         {{ page.title }} | {{ site.title }}
       {% else %}
-        {{ site.title }} | Ph.D. Student at TU Dresden & ScaDS.AI
+        {{ site.title }}
       {% endif %}
     </title>
 
