@@ -1,5 +1,12 @@
 main:
 
+ - title: "Think-Probe-Respond: Improving Large Language Models as Judges of Research Idea Novelty"
+    authors: "Tim Schopf, <strong>Tobias Schreieder</strong>, Akiko Aizawa"
+    conference_short: "EMNLP 2026 (Findings)"
+    conference: "Findings of the Association for Computational Linguistics: EMNLP, 2026."
+    pdf: "https://arxiv.org/abs/2608.25660"
+    image: "./assets/img/emnlp2026_novelty.png"
+
   - title: "Scientific Claim-Source Retrieval Revisited: A Comparative Study of Style Transfer and Re-Ranking"
     authors: "<strong>Tobias Schreieder</strong>, Harsh Khandelwal, Yu-Ling Zhong, Michael Färber"
     conference_short: "CLEF 2026"
