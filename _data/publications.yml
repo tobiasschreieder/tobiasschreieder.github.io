@@ -1,6 +1,6 @@
 main:
 
- - title: "Think-Probe-Respond: Improving Large Language Models as Judges of Research Idea Novelty"
+  - title: "Think-Probe-Respond: Improving Large Language Models as Judges of Research Idea Novelty"
     authors: "Tim Schopf, <strong>Tobias Schreieder</strong>, Akiko Aizawa"
     conference_short: "EMNLP 2026 (Findings)"
     conference: "Findings of the Association for Computational Linguistics: EMNLP, 2026."
