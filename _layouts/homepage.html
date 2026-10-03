@@ -113,6 +113,21 @@
       href="{{ '/assets/css/publications-no-dark-mode.css' | relative_url }}">
     {% endif %}
 
+    <!-- Apply saved theme before rendering to minimize flashing. -->
+    <script>
+      (function () {
+        try {
+          var savedTheme = localStorage.getItem("theme");
+
+          if (savedTheme === "dark" || savedTheme === "light") {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+          }
+        } catch (e) {
+          /* localStorage may be unavailable; fall back to system preference. */
+        }
+      })();
+    </script>
+
     <style>
       /* Reserve space for the fixed navigation bar. */
       body {
@@ -184,27 +199,116 @@
         border-bottom-color: #777;
       }
 
-      /* Dark-mode navigation bar. */
+      /* Light/dark mode toggle. */
+      .theme-toggle {
+        flex: 0 0 auto;
+        margin-left: auto;
+
+        width: 42px;
+        height: 42px;
+        padding: 0;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #555;
+        background: transparent;
+        border: 0;
+        border-radius: 50%;
+
+        font-size: 1.05rem;
+        cursor: pointer;
+
+        transition:
+          color 0.2s ease,
+          background-color 0.2s ease;
+      }
+
+      .theme-toggle:hover {
+        color: #222;
+        background: #f0f0f0;
+      }
+
+      .theme-toggle:focus-visible {
+        outline: 2px solid #777;
+        outline-offset: 2px;
+      }
+
+      /*
+       * Dark navigation bar when the user explicitly selects dark mode.
+       */
+      html[data-theme="dark"] .page-nav {
+        background: rgba(30, 30, 30, 0.98);
+        border-bottom-color: #444;
+        box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
+      }
+
+      html[data-theme="dark"] .page-nav a {
+        color: #bbb;
+      }
+
+      html[data-theme="dark"] .page-nav a:hover {
+        color: #eee;
+        background: #292929;
+      }
+
+      html[data-theme="dark"] .page-nav a.active {
+        color: #eee;
+        background: #333;
+        border-bottom-color: #999;
+      }
+
+      html[data-theme="dark"] .theme-toggle {
+        color: #bbb;
+      }
+
+      html[data-theme="dark"] .theme-toggle:hover {
+        color: #eee;
+        background: #333;
+      }
+
+      html[data-theme="dark"] .theme-toggle:focus-visible {
+        outline-color: #aaa;
+      }
+
+      /*
+       * Follow the operating-system preference when no manual theme has
+       * been selected.
+       */
       @media (prefers-color-scheme: dark) {
-        .page-nav {
+        html:not([data-theme]) .page-nav {
           background: rgba(30, 30, 30, 0.98);
           border-bottom-color: #444;
           box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
         }
 
-        .page-nav a {
+        html:not([data-theme]) .page-nav a {
           color: #bbb;
         }
 
-        .page-nav a:hover {
+        html:not([data-theme]) .page-nav a:hover {
           color: #eee;
           background: #292929;
         }
 
-        .page-nav a.active {
+        html:not([data-theme]) .page-nav a.active {
           color: #eee;
           background: #333;
           border-bottom-color: #999;
+        }
+
+        html:not([data-theme]) .theme-toggle {
+          color: #bbb;
+        }
+
+        html:not([data-theme]) .theme-toggle:hover {
+          color: #eee;
+          background: #333;
+        }
+
+        html:not([data-theme]) .theme-toggle:focus-visible {
+          outline-color: #aaa;
         }
       }
 
@@ -246,6 +350,13 @@
           font-size: 0.95rem;
         }
 
+        .theme-toggle {
+          width: 38px;
+          height: 38px;
+          margin-left: auto;
+          font-size: 1rem;
+        }
+
         header {
           top: auto;
           max-height: none;
@@ -262,6 +373,11 @@
         .page-nav a {
           padding: 0 9px;
           font-size: 0.9rem;
+        }
+
+        .theme-toggle {
+          width: 36px;
+          height: 36px;
         }
       }
 
@@ -283,6 +399,10 @@
 
         .page-nav a {
           min-height: auto;
+        }
+
+        .theme-toggle {
+          display: none;
         }
 
         header {
@@ -332,6 +452,15 @@
           {% if page.url contains "/cv" %}class="active"{% endif %}>
           CV
         </a>
+
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          title="Switch to dark mode">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
       </div>
     </nav>
 
@@ -481,6 +610,65 @@
     </div>
 
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+
+    <!-- Light/dark mode toggle. -->
+    <script>
+      (function () {
+        var toggle = document.getElementById("theme-toggle");
+        var root = document.documentElement;
+        var systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+        function getCurrentTheme() {
+          var manualTheme = root.getAttribute("data-theme");
+
+          if (manualTheme === "dark" || manualTheme === "light") {
+            return manualTheme;
+          }
+
+          return systemDark.matches ? "dark" : "light";
+        }
+
+        function updateToggle() {
+          var theme = getCurrentTheme();
+          var icon = toggle.querySelector("i");
+
+          if (theme === "dark") {
+            icon.className = "fas fa-sun";
+            toggle.setAttribute("aria-label", "Switch to light mode");
+            toggle.setAttribute("title", "Switch to light mode");
+          } else {
+            icon.className = "fas fa-moon";
+            toggle.setAttribute("aria-label", "Switch to dark mode");
+            toggle.setAttribute("title", "Switch to dark mode");
+          }
+        }
+
+        toggle.addEventListener("click", function () {
+          var newTheme =
+            getCurrentTheme() === "dark" ? "light" : "dark";
+
+          root.setAttribute("data-theme", newTheme);
+
+          try {
+            localStorage.setItem("theme", newTheme);
+          } catch (e) {
+            /* Ignore localStorage errors. */
+          }
+
+          updateToggle();
+        });
+
+        if (systemDark.addEventListener) {
+          systemDark.addEventListener("change", function () {
+            if (!root.hasAttribute("data-theme")) {
+              updateToggle();
+            }
+          });
+        }
+
+        updateToggle();
+      })();
+    </script>
 
     {% if site.google_analytics %}
     <script>
