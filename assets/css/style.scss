@@ -2,3 +2,136 @@
 ---
 
 @import "minimal-light";
+
+/*
+ * Manual light/dark theme support.
+ *
+ * The Minimal Light theme uses prefers-color-scheme for its automatic
+ * dark mode. These rules come after the theme import and therefore allow
+ * a user-selected data-theme value to override the operating-system
+ * preference.
+ */
+
+/* ---------- Manual light mode ---------- */
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+html[data-theme="light"] body {
+  background-color: #fff;
+  color: #727272;
+}
+
+html[data-theme="light"] autocolor {
+  color: #595959;
+}
+
+html[data-theme="light"] lightonly {
+  visibility: visible;
+}
+
+html[data-theme="light"] darkonly {
+  visibility: hidden;
+}
+
+html[data-theme="light"] papertitle {
+  color: inherit;
+}
+
+html[data-theme="light"] h1,
+html[data-theme="light"] h3,
+html[data-theme="light"] h4,
+html[data-theme="light"] h5,
+html[data-theme="light"] h6 {
+  color: #043361;
+}
+
+html[data-theme="light"] h2 {
+  color: #043361;
+}
+
+html[data-theme="light"] a {
+  color: #39c;
+}
+
+html[data-theme="light"] a:hover {
+  color: #069;
+}
+
+html[data-theme="light"] th,
+html[data-theme="light"] dt {
+  color: #444;
+}
+
+html[data-theme="light"] strong {
+  color: #222;
+}
+
+html[data-theme="light"] .social-icons a {
+  color: #043361 !important;
+}
+
+html[data-theme="light"] .social-icons a:hover {
+  background-color: white;
+  color: black !important;
+}
+
+
+/* ---------- Manual dark mode ---------- */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] body {
+  background-color: #20212b;
+  color: #dadbdf;
+}
+
+html[data-theme="dark"] autocolor {
+  color: #dadbdf;
+}
+
+html[data-theme="dark"] lightonly {
+  visibility: hidden;
+}
+
+html[data-theme="dark"] darkonly {
+  visibility: visible;
+}
+
+html[data-theme="dark"] papertitle {
+  color: #eeeff0;
+}
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+  color: rgb(62, 183, 240);
+}
+
+html[data-theme="dark"] a {
+  color: rgb(62, 183, 240);
+}
+
+html[data-theme="dark"] th,
+html[data-theme="dark"] dt {
+  color: rgb(62, 183, 240);
+}
+
+html[data-theme="dark"] strong {
+  color: #eeeff0;
+}
+
+html[data-theme="dark"] .social-icons a {
+  color: #3eb7f0 !important;
+}
+
+html[data-theme="dark"] .social-icons a:hover {
+  background-color: #20212b;
+  color: black !important;
+}
