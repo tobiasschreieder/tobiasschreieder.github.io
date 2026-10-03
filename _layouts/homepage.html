@@ -113,17 +113,24 @@
       href="{{ '/assets/css/publications-no-dark-mode.css' | relative_url }}">
     {% endif %}
 
-    <!-- Apply saved theme before rendering to minimize flashing. -->
+    <!--
+      Apply a previously selected theme before the page is rendered.
+      If no manual preference exists, Minimal Light continues to follow
+      the operating-system preference.
+    -->
     <script>
       (function () {
         try {
           var savedTheme = localStorage.getItem("theme");
 
           if (savedTheme === "dark" || savedTheme === "light") {
-            document.documentElement.setAttribute("data-theme", savedTheme);
+            document.documentElement.setAttribute(
+              "data-theme",
+              savedTheme
+            );
           }
         } catch (e) {
-          /* localStorage may be unavailable; fall back to system preference. */
+          /* Fall back to the operating-system preference. */
         }
       })();
     </script>
@@ -199,7 +206,7 @@
         border-bottom-color: #777;
       }
 
-      /* Light/dark mode toggle. */
+      /* Theme toggle button. */
       .theme-toggle {
         flex: 0 0 auto;
         margin-left: auto;
@@ -236,79 +243,116 @@
       }
 
       /*
-       * Dark navigation bar when the user explicitly selects dark mode.
+       * Explicit light mode.
+       *
+       * These rules are required because the operating system may itself
+       * be in dark mode. A manual light selection must therefore override
+       * the theme's automatic dark navbar styling.
+       */
+      html[data-theme="light"] .page-nav {
+        background: rgba(255, 255, 255, 0.98);
+        border-bottom-color: #d9d9d9;
+        box-shadow: 0 2px 9px rgba(0, 0, 0, 0.08);
+      }
+
+      html[data-theme="light"] .page-nav a {
+        color: #555;
+      }
+
+      html[data-theme="light"] .page-nav a:hover {
+        color: #222;
+        background: #f4f4f4;
+      }
+
+      html[data-theme="light"] .page-nav a.active {
+        color: #222;
+        background: #f0f0f0;
+        border-bottom-color: #777;
+      }
+
+      html[data-theme="light"] .theme-toggle {
+        color: #555;
+      }
+
+      html[data-theme="light"] .theme-toggle:hover {
+        color: #222;
+        background: #f0f0f0;
+      }
+
+      /*
+       * Explicit dark mode.
        */
       html[data-theme="dark"] .page-nav {
-        background: rgba(30, 30, 30, 0.98);
-        border-bottom-color: #444;
+        background: rgba(32, 33, 43, 0.98);
+        border-bottom-color: #444650;
         box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
       }
 
       html[data-theme="dark"] .page-nav a {
-        color: #bbb;
+        color: #dadbdf;
       }
 
       html[data-theme="dark"] .page-nav a:hover {
-        color: #eee;
-        background: #292929;
+        color: #eeeff0;
+        background: #292a35;
       }
 
       html[data-theme="dark"] .page-nav a.active {
-        color: #eee;
-        background: #333;
-        border-bottom-color: #999;
+        color: #eeeff0;
+        background: #30313d;
+        border-bottom-color: #3eb7f0;
       }
 
       html[data-theme="dark"] .theme-toggle {
-        color: #bbb;
+        color: #dadbdf;
       }
 
       html[data-theme="dark"] .theme-toggle:hover {
-        color: #eee;
-        background: #333;
+        color: #eeeff0;
+        background: #30313d;
       }
 
       html[data-theme="dark"] .theme-toggle:focus-visible {
-        outline-color: #aaa;
+        outline-color: #3eb7f0;
       }
 
       /*
-       * Follow the operating-system preference when no manual theme has
-       * been selected.
+       * If no manual preference exists, follow the operating-system
+       * preference exactly as Minimal Light normally does.
        */
       @media (prefers-color-scheme: dark) {
         html:not([data-theme]) .page-nav {
-          background: rgba(30, 30, 30, 0.98);
-          border-bottom-color: #444;
+          background: rgba(32, 33, 43, 0.98);
+          border-bottom-color: #444650;
           box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
         }
 
         html:not([data-theme]) .page-nav a {
-          color: #bbb;
+          color: #dadbdf;
         }
 
         html:not([data-theme]) .page-nav a:hover {
-          color: #eee;
-          background: #292929;
+          color: #eeeff0;
+          background: #292a35;
         }
 
         html:not([data-theme]) .page-nav a.active {
-          color: #eee;
-          background: #333;
-          border-bottom-color: #999;
+          color: #eeeff0;
+          background: #30313d;
+          border-bottom-color: #3eb7f0;
         }
 
         html:not([data-theme]) .theme-toggle {
-          color: #bbb;
+          color: #dadbdf;
         }
 
         html:not([data-theme]) .theme-toggle:hover {
-          color: #eee;
-          background: #333;
+          color: #eeeff0;
+          background: #30313d;
         }
 
         html:not([data-theme]) .theme-toggle:focus-visible {
-          outline-color: #aaa;
+          outline-color: #3eb7f0;
         }
       }
 
@@ -316,6 +360,16 @@
         font-size: 0.95rem;
         color: #666;
         font-style: italic;
+      }
+
+      html[data-theme="dark"] .pronouns {
+        color: #aaa;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html:not([data-theme]) .pronouns {
+          color: #aaa;
+        }
       }
 
       /*
@@ -616,12 +670,17 @@
       (function () {
         var toggle = document.getElementById("theme-toggle");
         var root = document.documentElement;
-        var systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+        var systemDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        );
 
         function getCurrentTheme() {
           var manualTheme = root.getAttribute("data-theme");
 
-          if (manualTheme === "dark" || manualTheme === "light") {
+          if (
+            manualTheme === "dark" ||
+            manualTheme === "light"
+          ) {
             return manualTheme;
           }
 
@@ -634,18 +693,32 @@
 
           if (theme === "dark") {
             icon.className = "fas fa-sun";
-            toggle.setAttribute("aria-label", "Switch to light mode");
-            toggle.setAttribute("title", "Switch to light mode");
+            toggle.setAttribute(
+              "aria-label",
+              "Switch to light mode"
+            );
+            toggle.setAttribute(
+              "title",
+              "Switch to light mode"
+            );
           } else {
             icon.className = "fas fa-moon";
-            toggle.setAttribute("aria-label", "Switch to dark mode");
-            toggle.setAttribute("title", "Switch to dark mode");
+            toggle.setAttribute(
+              "aria-label",
+              "Switch to dark mode"
+            );
+            toggle.setAttribute(
+              "title",
+              "Switch to dark mode"
+            );
           }
         }
 
         toggle.addEventListener("click", function () {
           var newTheme =
-            getCurrentTheme() === "dark" ? "light" : "dark";
+            getCurrentTheme() === "dark"
+              ? "light"
+              : "dark";
 
           root.setAttribute("data-theme", newTheme);
 
@@ -658,8 +731,22 @@
           updateToggle();
         });
 
+        /*
+         * If the user has never manually selected a theme, update the
+         * icon when the operating-system preference changes.
+         */
         if (systemDark.addEventListener) {
-          systemDark.addEventListener("change", function () {
+          systemDark.addEventListener(
+            "change",
+            function () {
+              if (!root.hasAttribute("data-theme")) {
+                updateToggle();
+              }
+            }
+          );
+        } else if (systemDark.addListener) {
+          /* Compatibility with older browsers. */
+          systemDark.addListener(function () {
             if (!root.hasAttribute("data-theme")) {
               updateToggle();
             }
@@ -691,7 +778,11 @@
         'ga'
       );
 
-      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga(
+        'create',
+        '{{ site.google_analytics }}',
+        'auto'
+      );
       ga('send', 'pageview');
     </script>
     {% endif %}
