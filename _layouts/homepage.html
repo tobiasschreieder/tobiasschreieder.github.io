@@ -184,6 +184,30 @@
         border-bottom-color: #777;
       }
 
+      /* Dark-mode navigation bar. */
+      @media (prefers-color-scheme: dark) {
+        .page-nav {
+          background: rgba(30, 30, 30, 0.98);
+          border-bottom-color: #444;
+          box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-nav a {
+          color: #bbb;
+        }
+
+        .page-nav a:hover {
+          color: #eee;
+          background: #292929;
+        }
+
+        .page-nav a.active {
+          color: #eee;
+          background: #333;
+          border-bottom-color: #999;
+        }
+      }
+
       .pronouns {
         font-size: 0.95rem;
         color: #666;
