@@ -10,6 +10,7 @@ A selection of invited talks, conference presentations, posters, and public demo
 
 | Date | Venue | Presentation | Links |
 |:----:|:------|:-------------|:-----:|
+| 21 Oct 2026 | Holtzbrinck Innovation Days 2026, Athens, Greece | **Oral Presentation**<br>*EVIDENZ: Evidence-based Text Generation with LLMs* | |
 | 24 Sep 2026 | CLEF 2026, Jena, Germany | **Oral Presentation**<br>*Claim2Source at CheckThat! 2026: Improving Multilingual Scientific Claim-Source Retrieval with Verification-based Re-Ranking* | [Paper](https://arxiv.org/abs/2607.04043) |
 | 23 Sep 2026 | CLEF 2026, Jena, Germany | **Oral & Poster Presentation**<br>*Scientific Claim-Source Retrieval Revisited: A Comparative Study of Style Transfer and Re-Ranking* | [Paper](https://link.springer.com/chapter/10.1007/978-3-032-39150-6_19) |
 | 06 Jul 2026 | ACL 2026, San Diego, USA | **Oral Presentation**<br>*Attribution, Citation, and Quotation: A Survey of Evidence-based Text Generation with Large Language Models* | [Paper](https://aclanthology.org/2026.acl-long.1430/) · [Press](https://scads.ai/acl-2026/) |
