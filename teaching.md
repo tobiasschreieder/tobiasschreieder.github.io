@@ -17,13 +17,14 @@ Teaching team member. See the **[course website](https://faerber-lab.github.io/s
 
 I supervise student research projects in the areas of natural language processing, information retrieval, and trustworthy AI.
 
-**Open project topics:** See the **[list of available student research projects](https://faerber-lab.github.io/proposed-student-projects/)**.
+**Open project topics:** See the **[list of available student research projects](https://faerber-lab.github.io/student-projects-ws2026/)**.
 
 ### Supervised Projects
 
 | Project | Status |
 |:--------|:------:|
 | Function-Aware Citation Retrieval and Generation | Completed (2026) |
+| Mitigating Medium-Novelty Bias in Research Idea Judgment | Ongoing |
 
 ---
 
