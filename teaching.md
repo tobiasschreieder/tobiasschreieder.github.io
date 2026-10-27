@@ -24,6 +24,7 @@ I supervise student research projects in the areas of natural language processin
 | Project | Status |
 |:--------|:------:|
 | Function-Aware Citation Retrieval and Generation | Completed (2026) |
+| Towards a Unified Evaluation Framework for Evidence-Based Text Generation with Large Language Models | Ongoing |
 | Mitigating Medium-Novelty Bias in Research Idea Judgment | Ongoing |
 
 ---
